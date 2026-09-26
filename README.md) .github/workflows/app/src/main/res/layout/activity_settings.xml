@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:padding="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Switch android:id="@+id/sw_enable"
+            android:text="启用分辨率改写"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <Switch android:id="@+id/sw_protocol"
+            android:text="同时改写协议层 (UCarConfig)"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <TextView android:text="当前投屏探测："
+            android:paddingTop="16dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <TextView android:id="@+id/tv_echo"
+            android:text="尚未探测到数据"
+            android:background="#11000000"
+            android:padding="12dp"
+            android:textSize="14sp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <Button android:id="@+id/btn_refresh"
+            android:text="刷新探测结果"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <TextView android:text="快捷预设：" android:paddingTop="16dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <Spinner android:id="@+id/sp_preset"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <TextView android:text="宽度 (px)：" android:paddingTop="12dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <EditText android:id="@+id/et_width"
+            android:inputType="number"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <TextView android:text="高度 (px)："
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <EditText android:id="@+id/et_height"
+            android:inputType="number"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <TextView android:paddingTop="12dp"
+            android:text="仅当车机原始分辨率为以下值时改写（留 0 = 全部改写）："
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <LinearLayout android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <EditText android:id="@+id/et_match_w" android:hint="原宽"
+                android:inputType="number" android:layout_weight="1"
+                android:layout_width="0dp" android:layout_height="wrap_content"/>
+            <EditText android:id="@+id/et_match_h" android:hint="原高"
+                android:inputType="number" android:layout_weight="1"
+                android:layout_width="0dp" android:layout_height="wrap_content"/>
+        </LinearLayout>
+
+        <Button android:id="@+id/btn_save" android:text="保存并应用"
+            android:layout_marginTop="24dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+</ScrollView>
