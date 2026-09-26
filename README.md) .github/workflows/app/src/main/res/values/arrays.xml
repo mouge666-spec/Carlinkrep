@@ -1,0 +1,7 @@
+
+<resources>
+    <string-array name="xposed_scope">
+        <!-- ⚠️ 换成三星车联真实包名！先查：pm list packages | grep -iE 'carlink|iccoa|samsung.*car' -->
+        <item>com.samsung.android.carlink</item>
+    </string-array>
+</resources>
